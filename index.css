@@ -2,6 +2,7 @@
 
     margin              : 0;
     padding             : 0;
+    box-sizing: border-box;
 }
 
 
@@ -13,7 +14,6 @@ body{
 
 
 .container-main{
-    background-color        : tomato;
     height                  : 900px;
     width                   : 100%;
 
@@ -46,11 +46,27 @@ body{
 }
 
 .item-b{
-    background-color            : burlywood;
+    animation                   : changebckground 15s ease-in-out infinite;
+    background                  : linear-gradient(-45deg, rgb(93, 229, 253) , rgb(190, 247, 100),rgb(77, 156, 247), red);
+    background-size             : 400% 400%;
     grid-area                   : content;
     -ms-grid-row                : 2;
     -ms-grid-column             : 1;
 }
+/* animated background */
+@keyframes changebckground {
+    0%{
+        background-position:0 50% ;
+    }
+    50%{
+        background-position:100% 50% ;
+    }
+    100%{
+        background-position:0 50% ;
+    }
+}
+/* end animated bck */
+
 .item-c{
     background-color            : black;
     grid-area                   :  footer;
@@ -74,3 +90,4 @@ body{
 }
 
 /* end responsive gridd */
+
