@@ -58,3 +58,19 @@ body{
     -ms-grid-column             : 1;
 }
 /* end grid setup */
+
+/* responsive grid */
+
+@media screen and (max-width:600px){
+    .container-main{
+        grid-template-columns       : 1fr;
+        grid-template-rows          : [first] 5% [second] auto [three] 25% [last];
+        grid-template-areas:
+        "nav"
+        "content"
+        "footer"
+        ;
+    }
+}
+
+/* end responsive gridd */
