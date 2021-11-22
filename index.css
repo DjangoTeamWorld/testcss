@@ -29,19 +29,32 @@ body{
     "footer footer footer footer"
     ;
 }
+/* grid for internet explorer */
+.container-main{
+    display                     : -ms-grid;
+    -ms-grid-columns             : [first] 10% [second] 20% [trhree] auto [four] 20% [last]; 
+    -ms-grid-rows                : [first] 5% [second] auto [three] 25% [last]; 
+}
+
+/* end grid for ie */
 .item-a{
     background-color            : black;
     grid-area                   : nav;
+    -ms-grid-row                : 1;
+    -ms-grid-column             : 1;
 
 }
 
 .item-b{
     background-color            : burlywood;
     grid-area                   : content;
-
+    -ms-grid-row                : 2;
+    -ms-grid-column             : 1;
 }
 .item-c{
     background-color            : black;
     grid-area                   :  footer;
+    -ms-grid-row                : 3;
+    -ms-grid-column             : 1;
 }
 /* end grid setup */
